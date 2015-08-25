@@ -36,7 +36,7 @@ class MainSection extends Component {
           onChange={this.handleChange.bind(this)}
         />
         {this.props.todos.map(todo => {
-          return <div>{todo.text} <button onClick={this.handleRemove.bind(this, todo.id)}>x</button></div>
+          return <div key={todo.id}>{todo.text} <button onClick={this.handleRemove.bind(this, todo.id)}>x</button></div>
         })}
       </div>
     )

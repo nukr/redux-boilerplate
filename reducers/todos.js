@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, COMPLETE_TODO } from '../actions/todos'
+import { ADD_TODO, DELETE_TODO, COMPLETE_TODO } from '../constants/ActionTypes'
 
 export default (state = [], action) => {
   switch (action.type) {

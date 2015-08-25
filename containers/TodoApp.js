@@ -7,10 +7,10 @@ import * as TodoActions from '../actions/todos'
 class TodoApp extends Component {
   render () {
     const {todos, dispatch} = this.props
-    const actions = bindActionCreators(TodoActions, dispatch)
+    const boundActionCreators = bindActionCreators(TodoActions, dispatch)
     return (
       <div>
-        <MainSection todos={todos} actions={actions} />
+        <MainSection todos={todos} actions={boundActionCreators} />
       </div>
     )
   }
