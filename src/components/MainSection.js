@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { fetchTodos } from '../actions/todos'
 
 class MainSection extends Component {
   constructor (props, context) {
@@ -6,6 +7,11 @@ class MainSection extends Component {
     this.state = {
       text: this.props.text || ''
     }
+  }
+
+  componentDidMount () {
+    const { dispatch } = this.props
+    dispatch(fetchTodos())
   }
 
   handleSubmit (e) {
@@ -27,6 +33,7 @@ class MainSection extends Component {
   render () {
     return (
       <div>
+        <div>input123123</div>
         <input
           type='text'
           autoFocus='true'
@@ -36,7 +43,7 @@ class MainSection extends Component {
           onChange={this.handleChange.bind(this)}
         />
         {this.props.todos.map(todo => {
-          return <div key={todo.id}>{todo.text} <button onClick={this.handleRemove.bind(this, todo.id)}>x</button></div>
+          return <div key={todo.id}>{todo.text} - {todo.createdAt}<button onClick={this.handleRemove.bind(this, todo.id)}>x</button></div>
         })}
       </div>
     )
@@ -45,6 +52,7 @@ class MainSection extends Component {
 
 MainSection.propTypes = {
   text: PropTypes.string,
+  dispatch: PropTypes.func,
   todos: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
 }

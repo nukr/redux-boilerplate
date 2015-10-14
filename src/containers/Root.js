@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import TodoApp from './TodoApp'
-import rootReducer from '../reducers'
+import configureStore from '../store/configureStore'
 
-const store = createStore(rootReducer)
+const store = configureStore()
 
 export default class Root extends Component {
   render () {

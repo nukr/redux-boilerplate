@@ -10,7 +10,7 @@ class TodoApp extends Component {
     const boundActionCreators = bindActionCreators(TodoActions, dispatch)
     return (
       <div>
-        <MainSection todos={todos} actions={boundActionCreators} />
+        <MainSection todos={todos} actions={boundActionCreators} dispatch={dispatch}/>
       </div>
     )
   }
