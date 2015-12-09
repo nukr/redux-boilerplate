@@ -20,9 +20,9 @@ export default (state = [], action) => {
 
     case types.COMPLETE_TODO:
       return state.map(todo => {
-        todo.id === action.id ?
-          Object.assign({}, todo, {text: action.text}) :
-          todo
+        todo.id === action.id
+          ? Object.assign({}, todo, {text: action.text})
+          : todo
       })
 
     default:

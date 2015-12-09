@@ -33,7 +33,7 @@ class MainSection extends Component {
   render () {
     return (
       <div>
-        <div>input123123</div>
+        <div>input</div>
         <input
           type='text'
           autoFocus='true'
