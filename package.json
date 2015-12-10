@@ -4,7 +4,8 @@
   "description": "redux boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "mocha": "mocha --compilers js:babel-register",
+    "test": "NODE_ENV=testing mocha --compilers js:babel-register src/components/__test__",
     "start": "babel-node devServer.js"
   },
   "repository": {
@@ -39,6 +40,9 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.3.13",
+    "chai": "^3.4.1",
+    "enzyme": "^1.1.0",
+    "mocha": "^2.3.4",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
