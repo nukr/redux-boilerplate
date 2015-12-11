@@ -43,6 +43,7 @@
     "chai": "^3.4.1",
     "enzyme": "^1.1.0",
     "mocha": "^2.3.4",
+    "react-addons-test-utils": "^0.14.3",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
